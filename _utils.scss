@@ -1,0 +1,17 @@
+//? @use utils.scss
+
+@mixin center-children {
+  // All children will be centered, overlapped on top of each other
+  display: grid;
+  > * {
+    // Cover parents' entire area
+    grid-area: 1 / -1 / 1 / -1;
+    // If element size < parent size, give child even "padding"
+    margin: auto;
+  }
+}
+
+@mixin rounded-full {
+  // Fully round corners
+  border-radius: 100vmax;
+}
